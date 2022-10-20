@@ -1,0 +1,93 @@
+#span {
+  color: red;
+  display: none;
+}
+body {
+  color: white;
+  opacity: 0.9;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+}
+.form {
+  width: 700px;
+  /* border: 2px solid red; */
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.form #field {
+  border: 2px solid black;
+  font-size: 20px;
+  padding: 10px;
+  background-color: rgb(54, 14, 91);
+  color: white;
+  width: 100px;
+}
+.form .main-color-container {
+  /* border: 2px solid red; */
+  margin-top: 20px;
+}
+.form .main-color-container .color {
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  border-radius: 50%;
+  /* border: 2px solid red; */
+}
+
+.form .main-color-container .color-box {
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
+.form .main-color-container input {
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+}
+
+table tr td,
+table tr th {
+  font-size: 22px;
+  padding-inline: 25px;
+  position: relative;
+  width: 100%;
+}
+
+#submit {
+  padding: 10px 15px;
+  font-size: 20px;
+  background-color: rgb(54, 14, 91);
+  margin-top: 20px;
+  float: right;
+  outline: 1px solid white;
+  color: white;
+  cursor: pointer;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: flex;
+}
+
+.color.blue {
+  background-color: blue;
+}
+.color.orange {
+  background-color: orange;
+  width: 100%;
+}
+.color.yellow {
+  background-color: yellow;
+}
+.color.pink {
+  background-color: rgb(234, 0, 255);
+}
+.color.green {
+  background-color: green;
+}

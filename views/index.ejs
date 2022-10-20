@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lucent Innovation Fun-Fair</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <form class="form" method="post" action="/submit">
+        <select name="userType" id="field">
+            <option value="free">Free</option>
+            <option value="paid">Paid</option>
+        </select>
+
+        <div class="main-color-container">
+
+            <table class="color-box">
+                <tr>
+                    <th>Color</th>
+                    <th>Price</th>
+                    <th>Available</th>
+                    <th>Quentity</th>
+                    <th>Amount</th>
+                </tr>
+
+                <!-- blue free paid-->
+                <tr class="free-row paid-row">
+                    <td>
+                        <div class="color blue"></div>
+                    </td>
+                    <td>
+                        05
+                    </td>
+                    <td>100</td>
+                    <td>
+                        <input type="number" value="0" name="blue"
+                            max=<%=(quantity.length>1)?quantity[1].currentQuantity : 100%>
+                        class="quentity">
+                    </td>
+                    <td>48</td>
+                </tr>
+
+                <!-- pink free -->
+                <tr class="free-row ">
+                    <td>
+                        <div class="color pink"></div>
+                    </td>
+                    <td>
+                        20
+                    </td>
+                    <td>100</td>
+                    <td>
+                        <input type="number" value="0" name="pink"
+                            max=<%=(quantity.length>1)?quantity[3].currentQuantity:100 %>
+                        class="quentity">
+                    </td>
+                    <td>48</td>
+                </tr>
+
+                <!-- green free-->
+                <tr class="free-row ">
+                    <td>
+                        <div class="color green"></div>
+                    </td>
+                    <td>
+                        10
+                    </td>
+                    <td>100</td>
+                    <td>
+                        <input type="number" value="0" name="green"
+                            max=<%=(quantity.length>1)?quantity[2].currentQuantity :100%> id=""
+                        class="quentity">
+                    </td>
+                    <td>48</td>
+                </tr>
+
+                <!-- orange 20  paid-->
+                <tr class="paid-row ">
+                    <td>
+                        <div class="color orange"></div>
+                    </td>
+                    <td>
+                        20
+                    </td>
+                    <td>100</td>
+                    <td>
+                        <input type="number" value="0" name="orange" min="0"
+                            max=<%=(quantity.length>1)?quantity[4].currentQuantity:100 %> id=""
+                        class="quentity">
+                    </td>
+                    <td>48</td>
+                </tr>
+
+                <!-- yellow 10  paid-->
+                <tr class="paid-row ">
+                    <td>
+                        <div class="color yellow"></div>
+                    </td>
+                    <td>
+                        10
+                    </td>
+                    <td>100</td>
+                    <td>
+                        <input type="number" value="0" name="yellow" min="0"
+                            max=<%=(quantity.length>1)?quantity[0].currentQuantity:100 %>
+                        class="quentity">
+                    </td>
+                    <td>48</td>
+                </tr>
+            </table>
+
+        </div>
+        <br>
+        <div class="remain-token">
+            <table id="table" border="1">
+                <tr>
+                    <th>colour</th>
+                    <th>total</th>
+                    <th>Current</th>
+                    <th>left</th>
+                </tr>
+                <% quantity.map((q)=>{ %>
+                    <tr>
+                        <td>
+                            <%=q.colour%>
+                        </td>
+                        <td>
+                            <%=q.totalquantity%>
+                        </td>
+                        <td>
+                            <%=q.currentQuantity %>
+                        </td>
+                        <td>
+                            <%=q.leftQuantity%>
+                        </td>
+                    </tr>
+                    <% }) %>
+
+            </table>
+        </div>
+
+        <input id="submit" type="submit" value="Submit">
+
+    </form>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
